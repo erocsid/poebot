@@ -1,0 +1,77 @@
+README poebot
+$Id: README 51 2010-07-18 23:22:12Z discore $
+
+http://discore.org/poebot
+
+
+
+I. Description
+________________________________________________________________________________
+
+poebot is an IRC bot written in Perl and usable anywhere Perl is installed with
+the required modules.
+
+It is written to be very flexible; each command is a seperate module that can
+do just about anything you want. Information on writing your own modules is
+available at the website, or by reading the provided modules for yourself.
+
+
+II. Requirements
+________________________________________________________________________________
+
+Perl 5.x
+
+POE::Component::IRC is the only required module. Addon scripts may require
+other modules.
+
+A MySQL database is suggested, many modules like to use them, but not required.
+
+
+III. Installation
+________________________________________________________________________________
+
+Detailed installation instructions are available at http://discore.org/poebot
+
+Quick installation breakdown:
+  1) edit the config file
+  2) edit the modules_loaded file to select which commands to load
+  3) run the bot
+
+Each command you load into poebot may require additional steps. Most commands
+should have documentation written inside of them; check the modules/command.pm
+files for instructions on making them work.
+
+If you decide to use defines.pm and/or quotes.pm, you probably want to source
+the schema files in the utils directory to create the tables required.
+
+If you decide to use weather.pm, you must edit the modules/weather.pm file to
+add some required information like cache directory and weather.com license key.
+
+ping.pm is an example module that can get you started writing your own.
+
+
+IV. Miscellaneous
+________________________________________________________________________________
+
+The utils directory has a few useful things.
+
+botchk.sh is a script largely stolen from the old eggdrop files that checks to
+see if your bot is running. Edit it and set some required variables then throw
+it into your crontab.
+
+poebot.cgi is a simple web frontend to the defines and quotes database. Edit it
+and set some required variables then put it into a directory you can ExecCGI
+from.
+
+The schema files are used to create the tables for defines.pm and quotes.pm.
+
+
+V. Contact
+________________________________________________________________________________
+
+All bugs, comments, and feature requests may be sent to:
+  tyler@xmission.com
+
+poebot was written by Tyler Morgan and is licensed under GPL3
+
+Enjoy!

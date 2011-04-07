@@ -1,0 +1,18 @@
+# this file defines what modules are loaded
+
+# helpers
+use modules::db_mysql qw(:Main);
+use modules::lwp_useragent qw(:Main);
+use modules::tinyurl_create qw(:Main);
+
+# features
+use modules::defines qw(:Main);
+use modules::dictionary qw(:Main);
+use modules::google qw(:Main);
+use modules::link qw(:Main);
+use modules::magicball qw(:Main);
+use modules::ping qw(:Main);
+use modules::quotes qw(:Main);
+use modules::tinyurl_auto qw(:Main);
+use modules::weather qw(:Main);
+use modules::whois qw(:Main);

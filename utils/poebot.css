@@ -1,0 +1,44 @@
+/* $Id: poebot.css 37 2009-11-13 05:20:22Z discore $ */
+body {
+	background-color: #FFFFFF;
+	color: #000000;
+	font: 12pt Arial, Arial, Helvetica, sans-serif;
+}
+
+a:link {
+	color: #000000;
+}
+
+a:visited {
+	color: #333333;
+}
+
+a:hover, a:active {
+	color: #0000FF;
+}
+
+input.submit {
+	font: 12pt Arial, Arial, Helvetica, sans-serif;
+}
+
+h1.header {
+}
+
+table {
+	border: 1px solid #000000;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+tr {
+	border: 1px solid #000000;
+}
+
+th {
+	text-align: center;
+	border: 1px solid #000000;
+}
+
+td {
+	text-align: left;
+}
