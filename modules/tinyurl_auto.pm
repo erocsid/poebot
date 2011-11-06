@@ -15,10 +15,14 @@ our %EXPORT_TAGS = (
 	Main	=> [qw(tinyurl_return)]
 );
 
-$::commands{'http://(\S+\.\S+)|https://(\S+\.\S+)'} = ["tinyurl_auto", "tinyurl_return"];
+$::commands{'http://(\S+\.\S+)'} = ["tinyurl_auto", "tinyurl_return"];
+$::commands{'https://(\S+\.\S+)'} = ["tinyurl_auto", "tinyurl_return"];
 
 my $verbose = $::verbose;
 my $extra_verbose = $::extra_verbose;
+
+# urls must be at least this long -- http:// is counted
+my $minimum_characters = "27";
 
 # tinyurl generation
 sub tinyurl_return {
@@ -33,7 +37,12 @@ sub tinyurl_return {
 	}
 
 	# don't tinyurl tinyurls!
-	if($text =~ /http:\/\/tinyurl.com/ or $text =~ /http:\/\/www.tinyurl.com/) {
+	if($text =~ /(http|https):\/\/tinyurl.com/ or $text =~ /(http|https):\/\/www.tinyurl.com/) {
+		return 0;
+	}
+
+	# minimum characters
+	if(length($text) < $minimum_characters) {
 		return 0;
 	}
 

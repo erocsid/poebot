@@ -7,7 +7,7 @@ use modules::tinyurl_create qw(:Main);
 
 # features
 use modules::defines qw(:Main);
-use modules::dictionary qw(:Main);
+#use modules::dictionary qw(:Main);
 use modules::google qw(:Main);
 use modules::link qw(:Main);
 use modules::magicball qw(:Main);

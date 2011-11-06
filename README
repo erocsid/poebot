@@ -66,7 +66,13 @@ from.
 The schema files are used to create the tables for defines.pm and quotes.pm.
 
 
-V. Contact
+V. Known Bugs
+________________________________________________________________________________
+
+2011-11-05 - the dictionary module is broken
+
+
+VI. Contact
 ________________________________________________________________________________
 
 All bugs, comments, and feature requests may be sent to:
